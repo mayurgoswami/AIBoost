@@ -1,0 +1,57 @@
+/* light theme */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --primary-color-transparent: #007bff80;
+  --black-color: #1a1a2e;
+  --black-color-transparent: #1a1a2e80;
+  --up-black-color: #121212;
+  --white-color: #ffffff;
+  --white-color-transparent: #ffffff80;
+  --up-white-color: #f9f9ff;
+  --primary-rgb: 91, 124, 250;
+  --accent-color: #ff5bf1;
+  --accent-rgb: 255, 91, 241;
+  
+  --white-border-shadow: rgba(255, 255, 255, 0.1);
+  --black-border-shadow: rgba(0, 0, 0, 0.1);
+  --black-color-shadow-dark: rgba(0, 0, 0, 0.15);
+}
+
+/* dark theme */
+/* :root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --primary-color-transparent: #007bff80;
+  --white-color: #1a1a2e;
+  --white-color-transparent: #1a1a2e80;
+  --up-white-color: #121212;
+  --black-color: #ffffff;
+  --black-color-transparent: #ffffff80;
+  --up-black-color: #f9f9ff;
+  --primary-rgb: 91, 124, 250;
+  --accent-color: #ff5bf1;
+  --accent-rgb: 255, 91, 241;
+  
+  --white-border-shadow: rgba(0, 0, 0, 0.1);
+  --black-border-shadow: rgba(255, 255, 255, 0.1);
+  --black-color-shadow-dark: rgba(0, 0, 0, 0.15);
+} */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white--color);
+}

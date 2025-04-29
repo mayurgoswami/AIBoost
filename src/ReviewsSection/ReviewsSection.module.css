@@ -1,0 +1,308 @@
+.reviews_section {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, var(--up-white-color) 0%, var(--white-color) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section_header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .section_title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--black-color);
+  }
+  
+  .section_title span {
+    background: linear-gradient(135deg, #3a5bd9 0%, #00feba 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;  
+  }
+  
+  .section_subtitle {
+    font-size: 1.2rem;
+    color: var(--black-color-transparent);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .reviews_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+  
+  .review_card {
+    background: var(--white-color);
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 10px 30px var(--black-border-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--black-border-shadow);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quote_icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--black-border-shadow);
+    width: 60px;
+    height: 60px;
+  }
+  
+  .review_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review_rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .review_date {
+    font-size: 0.9rem;
+    color: var(--black-color-transparent);
+  }
+  
+  .review_text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--black-color-transparent);
+    margin-bottom: 30px;
+    flex-grow: 1;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .review_text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #5b7cfa, #00feba);
+    border-radius: 2px;
+  }
+  
+  .reviewer_info {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .user_avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .user_details {
+    flex-grow: 1;
+  }
+  
+  .user_name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: var(--black-color);
+  }
+  
+  .user_title {
+    font-size: 0.9rem;
+    color: var(--black-color-transparent);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .section_title {
+      font-size: 2.2rem;
+    }
+    
+    .reviews_grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .reviews_section {
+      padding: 80px 0;
+    }
+    
+    .section_container {
+      padding: 0 20px;
+    }
+    
+    .section_header {
+      margin-bottom: 50px;
+    }
+    
+    .reviews_grid {
+      grid-template-columns: 1fr;
+      margin-bottom: 50px;
+    }
+    
+    .review_card {
+      padding: 30px;
+    }
+  }
+
+  
+  
+  /* Star rating styles */
+  .star-rating {
+    display: flex;
+    gap: 5px;
+  }
+  
+  /* SetReview component styles */
+  .set_review_container {
+    background: var(--white-color);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px var(--black-border-shadow);
+  }
+  
+  .set_review_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--black-color);
+  }
+  
+  .review_form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .review_form div label {
+    color: var(--black-color);
+  }
+
+  .star_button {
+    background: transparent;
+    border: none;
+  }
+  
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form_group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--black-color-transparent);
+  }
+  
+  .review_textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1px solid var(--black-color-transparent);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    resize: vertical;
+    background: var(--white-color);
+    color: var(--black-color);
+  }
+  
+  .review_textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--black-border-shadow);
+  }
+  
+  .user_info_inputs {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .user_info_inputs .form_group {
+    flex: 1;
+  }
+  
+  .name_input,
+  .profession_input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--black-color-transparent);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: var(--white-color);
+    color: var(--black-color);
+  }
+  
+  .name_input:focus,
+  .profession_input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--black-border-shadow);
+  }
+  
+  .submit_button {
+    align-self: center;
+    padding: 14px 40px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+  }
+  
+  .submit_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--black-border-shadow);
+  }
+  
+  @media (max-width: 768px) {
+    .set_review_container {
+      padding: 30px 20px;
+    }
+    
+    .user_info_inputs {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
